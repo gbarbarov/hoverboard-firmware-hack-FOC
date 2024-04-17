@@ -518,7 +518,6 @@ int main(void) {
       backwardDrive = 0;
     }
 
-
     // ####### INACTIVITY TIMEOUT #######
     if (abs(cmdL) > 50 || abs(cmdR) > 50) {
       inactivity_timeout_counter = 0;
@@ -529,7 +528,6 @@ int main(void) {
       poweroff();
     }
 
-
     // HAL_GPIO_TogglePin(LED_PORT, LED_PIN);                 // This is to measure the main() loop duration with an oscilloscope connected to LED_PIN
     // Update states
     inIdx_prev = inIdx;
@@ -538,7 +536,6 @@ int main(void) {
     }
   }
 }
-
 
 // ===========================================================
 /** System Clock Configuration
