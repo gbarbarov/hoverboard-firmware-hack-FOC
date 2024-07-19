@@ -413,9 +413,11 @@ void UART_DisableRxErrors(UART_HandleTypeDef *huart)
 /* =========================== General Functions =========================== */
 
 void poweronMelody(void) {
+  uint8_t melody[]={1,3,5,7,9,7,8,9}; // agrego melodia
     buzzerCount = 0;  // prevent interraction with beep counter
     for (int i = 8; i >= 0; i--) {
-      buzzerFreq = (uint8_t)i;
+      //buzzerFreq = (uint8_t)i;
+      buzzerFreq= melody[i]; 
       HAL_Delay(100);
     }
     buzzerFreq = 0;
